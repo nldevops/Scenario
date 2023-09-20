@@ -19,8 +19,12 @@ namespace Business
 
         public string GetRandomLetter()
         {
-            string random = "Z";
-            return random;
+            //string random = "Z";
+            //return random;
+            string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Random rand = new Random();
+            int num = rand.Next(0, chars.Length);
+            return chars[num].ToString();
         }
 
         public string GetTestData()

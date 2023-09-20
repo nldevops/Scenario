@@ -1,12 +1,26 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Business;
 
-string? value = Console.ReadLine();
+
 
 Repository repository = new Repository();
-string input = repository.OrchestrateReturn(value);
 
-Console.WriteLine(input);
+while (true)
+{
+    Console.WriteLine("Enter selections: time or random or test. Press q to quit");
+    string? value = Console.ReadLine();
+
+    if (value.ToLower() == "q") break;
+
+    string input = repository.OrchestrateReturn(value);
+
+    Console.WriteLine(input);
+
+    //value = Console.ReadLine();
+
+    
+}
+
 
 //User requests a tool set from agent
 // Tool set is passed to the Agent
